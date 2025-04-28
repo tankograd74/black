@@ -5,42 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Las Vegas'a Git</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
     body {
       background: url('image1.png') center/cover no-repeat;
-      font-family: Arial, sans-serif;
+      background-size: cover;
+      position: relative;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      overflow: hidden;
-    }
-    .container {
+      align-items: center;
       text-align: center;
-      z-index: 2;
+      min-height: 100vh;
       padding: 20px;
-      background: rgba(255,255,255,0.5);
-      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #FFD700;
     }
-    .tagline {
-      font-family: 'Georgia', serif;
-      font-size: 1.3rem;
-      color: #000;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    .content .tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.7rem;
+      margin-bottom: 80px;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     }
     .button {
-      text-decoration: none;
       display: inline-block;
       padding: 20px 40px;
       font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      color: #FFD700;
+      text-decoration: none;
       border-radius: 8px;
-      color: #fff;
-      cursor: pointer;
       background: linear-gradient(45deg, #800080, #ff0080, #0080ff, #00ff80);
       background-size: 300% 300%;
       animation: pulse 2s infinite, gradient 6s ease infinite;
-      border: none;
+      cursor: pointer;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -52,22 +64,35 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    .button:active {
-      background-color: #008000;
-      transform: scale(0.95);
-      animation: none;
+    .fullscreen-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
     }
     @media (max-width: 600px) {
-      .tagline { font-size: 1rem; }
-      .button { padding: 15px 30px; font-size: 1.2rem; }
-      .container { padding: 15px; }
+      body {
+        background: url('image2.png') center/cover no-repeat;
+        background-size: cover;
+      }
+      .content .tagline {
+        font-size: 2rem;
+        margin-bottom: 60px;
+      }
+      .button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="tagline">Ücretsiz DEMO Hesabı! Kayıt olun ve depozitonuz için 500% bonus ile ücretsiz dönüşler kazanın!</div>
+  <div class="content">
+    <div class="tagline">Kayıt olun ve depozitonuz için 500% bonus ile ücretsiz dönüşler kazanın!</div>
     <a href="https://gl.darkgenerals.com/click?o=319&a=1026&link_id=1556" target="_blank" rel="noopener noreferrer" class="button">GO!</a>
   </div>
+  <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" class="fullscreen-link"></a>
 </body>
 </html>
