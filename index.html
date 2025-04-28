@@ -15,6 +15,20 @@
       justify-content: center;
       overflow: hidden;
     }
+    .container {
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 10px;
+    }
+    .tagline {
+      font-family: 'Georgia', serif;
+      font-size: 1.3rem;
+      color: #000;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    }
     .button {
       text-decoration: none;
       display: inline-block;
@@ -44,14 +58,16 @@
       animation: none;
     }
     @media (max-width: 600px) {
-      .button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
-      }
+      .tagline { font-size: 1rem; }
+      .button { padding: 15px 30px; font-size: 1.2rem; }
+      .container { padding: 15px; }
     }
   </style>
 </head>
 <body>
-  <a href="https://gl.darkgenerals.com/click?o=319&a=1026&link_id=1554" class="button">Las Vegas'a Git</a>
+  <div class="container">
+    <div class="tagline">Kayıt olun ve depozitonuz için bonus ile ücretsiz dönüşler kazanın!</div>
+    <a href="https://gl.darkgenerals.com/click?o=319&a=1026&link_id=1554" target="_blank" rel="noopener noreferrer" class="button">Las Vegas'a Git</a>
+  </div>
 </body>
 </html>
